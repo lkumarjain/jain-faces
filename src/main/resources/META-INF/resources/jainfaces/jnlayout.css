@@ -1,0 +1,200 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+.jn-layout-wrapper {
+	position: relative;
+	overflow: hidden;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;	
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width : 100%;
+	height:100%;
+}
+
+/* ------------------------------------------------- Menu CSS ------------------------------------------------ */
+.jn-layout-menu {
+	height : 30px;
+	width : 100%;
+	padding-top : 5px;
+}
+
+.jn-menu-text {
+	float : left;
+	padding-left : 10px;
+	padding-top : 4px;
+}
+
+.jn-menu {
+	float : right;
+	padding-right : 20px;
+}
+
+.jn-menu .holder {
+	font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index : 33;
+ }
+ 
+.jn-menu a, .jn-menu-content a {
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.jn-menu-content {
+	z-index : 3;
+	position : absolute;
+	top : 25px;
+	right : 15px;
+	width : 250px;
+	border-radius: 10px;
+	border : 5px solid;
+	max-height : 300px;
+	overflow : auto;
+}
+
+.jn-menu-content ul,
+.jn-menu-content ul li,
+.jn-menu-content ul li a {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	list-style: none;
+	line-height: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.jn-menu-content ul,
+.jn-menu-content ul li,
+.jn-menu-content ul li a {
+	  display: block;
+	  position: relative;
+}
+
+.jn-menu-content ul li a {
+	  padding: 15px 20px;
+}
+
+.jn-menu-content ul ul li a {
+	padding: 10px 20px;
+	z-index: 1;
+}
+
+.jn-menu-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* ---------------------------------------- Display CSS -------------------------------------*/
+.jn-hide {
+		display : none !important;
+}
+.jn-show {
+	display : inherit;
+}
+
+.jn-showOnMobile {
+	display : none;
+}
+
+/* ------------------------------------------ Layout CSS ------------------------------------------*/
+.jn-layout {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;	
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.jn-layout-content {
+	position : absolute;
+	top:0px;
+	bottom : 0px;
+	left : 0px;
+	right : 0px;
+}
+
+.jn-layout-pane-center {
+	position: relative;
+	float: none;
+	border: 1px solid transparent;
+}
+
+.jn-layout-pane-east {
+	float: right;
+}
+
+.jn-layout-pane-south {
+	position: absolute;
+	bottom: 0%;
+}
+
+.jn-layout-pane-north, .jn-layout-pane-south {
+	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.jn-hideOnMobile {
+		display : none !important;
+	}
+	.jn-showOnMobile {
+		display : inherit;
+	}
+	.jn-layout-content {
+		top:35px;
+	}
+	.jn-layout-pane-center {
+		height : 100% !important;
+		width : 100% !important;
+	}
+	.jn-layout-pane-north, .jn-layout-pane-west, .jn-layout-pane-east, .jn-layout-pane-south {
+		position : absolute;
+		top:0px;
+		bottom : 0px;
+		left : 0px;
+		right : 20%;
+		z-index : 2;
+		height : auto !important;
+		width : auto !important;
+		-webkit-border-top-right-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		-moz-border-top-right-radius: 10px;
+		-moz-border-bottom-right-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.jn-layout-place-holder {
+		position : absolute;
+		top:0px;
+		bottom : 0px;
+		left : 0px;
+		right : 0px;
+		z-index : 2;
+		background: #49505a;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";  /* IE 8 */
+		filter: alpha(opacity=20);  /* IE 5-7 */
+		-moz-opacity: 0.2;          /* Netscape */
+		-khtml-opacity: 0.2;        /* Safari 1.x */
+		opacity: 0.2;               /* Good browsers */
+	}
+}

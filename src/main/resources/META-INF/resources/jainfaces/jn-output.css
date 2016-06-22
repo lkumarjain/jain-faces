@@ -1,0 +1,76 @@
+.jn-output {
+	min-width: 10px;
+	padding: 3px 7px;
+	line-height: 1;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.jn-output-bage {
+	font-size: 14px;
+	text-align: center;
+	font-weight: 700;
+	display: inline-block;
+}
+
+.jn-output-with-header {
+	min-width: 100px;
+	text-align: center;
+	margin: 2px 0px;
+	display: inline-block;
+	padding: 10px;
+}
+
+.jn-output-header {
+	width: 100%;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+.jn-output-header-text {
+	overflow: hidden;
+}
+
+.jn-output-with-header .jn-output-text, .jn-output-with-header .jn-output-text-icon
+	{
+	font-size: 30px;
+}
+
+.jn-output-header-icon {
+	float: left;
+	padding-right: 2px;
+	overflow: hidden;
+}
+
+.jn-output-label {
+	padding-bottom: 2px;
+	overflow: hidden;
+}
+
+.jn-output-horizontal .jn-output-label {
+	float: left;
+}
+
+.jn-output-text {
+	overflow: hidden;
+}
+
+.jn-output-text-with-icon {
+	overflow: hidden;
+}
+
+.jn-output-text-icon {
+	overflow: hidden;
+	float: left;
+	padding-right: 3px;
+}
+
+.jn-output-horizontal .jn-output-text-with-icon {
+	float: left;
+}
+
+.jn-output-horizontal .jn-output-label {
+	padding-right: 5px;
+}
