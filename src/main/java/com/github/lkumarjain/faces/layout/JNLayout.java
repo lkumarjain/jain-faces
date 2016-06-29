@@ -12,11 +12,12 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.layout;
+package com.github.lkumarjain.faces.layout;
 
 import java.util.List;
 
 import javax.faces.application.ResourceDependencies;
+import javax.faces.application.ResourceDependency;
 import javax.faces.component.UIComponent;
 import javax.faces.component.UIComponentBase;
 import javax.faces.component.UINamingContainer;
@@ -24,16 +25,21 @@ import javax.faces.context.FacesContext;
 
 import org.primefaces.component.api.Widget;
 
-import com.jain.faces.common.JNIConstant;
+import com.github.lkumarjain.faces.common.JNIConstant;
 
 @ResourceDependencies({
+	@ResourceDependency(library="primefaces", name="jquery/jquery.js"),
+	@ResourceDependency(library="primefaces", name="core.js"),
+	@ResourceDependency(library="primefaces", name="components.js"),
+	@ResourceDependency(library="jainfaces", name="jnlayout.js"),
+	@ResourceDependency(library="jainfaces", name="jnlayout.css")
 })
-public class JNLayoutPane extends UIComponentBase implements Widget {
-	public static final String COMPONENT_TYPE = "com.jain.faces.component.JNLayoutPane";
-	private static final String DEFAULT_STYLE_CLASS = "jn-layout jn-layout-pane-";
+public class JNLayout extends UIComponentBase implements Widget {
+	public static final String COMPONENT_TYPE = "com.jain.faces.component.JNLayout";
+	public static final String DEFAULT_RENDERER = "com.jain.faces.component.JNLayoutRenderer";
 
-	public JNLayoutPane() {
-		setRendererType(null);
+	public JNLayout() {
+		setRendererType(DEFAULT_RENDERER);
 	}
 
 	public String getFamily() {
@@ -41,13 +47,9 @@ public class JNLayoutPane extends UIComponentBase implements Widget {
 	}
 
 	protected enum PropertyKeys {
-		label
-		,widgetVar
+		widgetVar
 		,style
-		,styleClass
-		,position
-		,width
-		,height;
+		,styleClass;
 
 		String toString;
 
@@ -60,14 +62,6 @@ public class JNLayoutPane extends UIComponentBase implements Widget {
 		public String toString() {
 			return ((this.toString != null) ? this.toString : super.toString());
 		}
-	}
-
-	public String getLabel() {
-		return (String) getStateHelper().eval(PropertyKeys.label, null);
-	}
-
-	public void setLabel(String _label) {
-		getStateHelper().put(PropertyKeys.label, _label);
 	}
 
 	public String getWidgetVar() {
@@ -94,48 +88,12 @@ public class JNLayoutPane extends UIComponentBase implements Widget {
 		getStateHelper().put(PropertyKeys.styleClass, _styleClass);
 	}
 
-	public String getPosition() {
-		return (String) getStateHelper().eval(PropertyKeys.position, null);
-	}
-
-	public void setPosition(String _position) {
-		getStateHelper().put(PropertyKeys.position, _position);
-	}
-
-	public String getWidth() {
-		return (String) getStateHelper().eval(PropertyKeys.width, null);
-	}
-
-	public void setWidth(String _width) {
-		getStateHelper().put(PropertyKeys.width, _width);
-	}
-
-	public String getHeight() {
-		return (String) getStateHelper().eval(PropertyKeys.height, null);
-	}
-
-	public void setHeight(String _height) {
-		getStateHelper().put(PropertyKeys.height, _height);
-	}
-
 	public String resolveWidgetVar() {
 		String userWidgetVar = getWidgetVar();
 		if(userWidgetVar != null)
 			return userWidgetVar;
 		FacesContext context = getFacesContext();
 		return "widget_" + getClientId(context).replaceAll("-|" + UINamingContainer.getSeparatorChar(context), "_");
-	}
-
-	public boolean hasChildPane() {
-		List<UIComponent> children = getChildren();
-		for (UIComponent component : children) {
-			if (component instanceof JNLayoutPane) return true;
-		}
-		return false;
-	}
-
-	public boolean isCenter() {
-		return getPosition().equalsIgnoreCase("center");
 	}
 
 	public JNLayoutPane center() {
@@ -148,13 +106,5 @@ public class JNLayoutPane extends UIComponentBase implements Widget {
 			}
 		}
 		return null;
-	}
-
-	public String styleClass() {
-		StringBuilder styleClassBuilder = new StringBuilder(JNLayoutPane.DEFAULT_STYLE_CLASS);
-		styleClassBuilder.append(getPosition().toLowerCase());
-		if (!isCenter()) styleClassBuilder.append(" jn-hideOnMobile  ");
-		if (getStyleClass() != null)  styleClassBuilder.append(getStyleClass());
-		return styleClassBuilder.toString();
 	}
 }

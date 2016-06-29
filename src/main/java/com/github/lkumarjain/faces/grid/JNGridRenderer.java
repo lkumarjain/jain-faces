@@ -12,7 +12,7 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.grid;
+package com.github.lkumarjain.faces.grid;
 
 import java.io.IOException;
 

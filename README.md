@@ -1,7 +1,7 @@
 <h3>
 		<a class="anchor" href="https://github.com/lkumarjain/jain-faces" aria-hidden="true">
 		  <span aria-hidden="true" class="octicon octicon-link">
-		    Jain-Extension
+		    Jain-Faces
 		  </span>
 		</a>
 </h3>
@@ -17,19 +17,16 @@
 		<span aria-hidden="true" class="octicon octicon-link">This component library Includes following Components</span>
 		<ul>
 			<li>
-				JN-Layout
+				<a href="https://github.com/lkumarjain/jain-faces-showcase/blob/master/src/main/webapp/layout/index.xhtml" class="user-mention">JN-Layout</a>
 			</li>
 			<li>
-				JN-Grid
+				<a href="https://github.com/lkumarjain/jain-faces-showcase/blob/master/src/main/webapp/grid/index.xhtml" class="user-mention">JN-Grid</a>
 			</li>
 			<li>
-				JN-Menu
+				<a href="https://github.com/lkumarjain/jain-faces-showcase/blob/master/src/main/webapp/output/index.xhtml" class="user-mention">JN-Output</a>
 			</li>
 			<li>
-				JN-Card
-			</li>
-			<li>
-				JN-Group
+				<a href="https://github.com/lkumarjain/jain-faces-showcase/blob/master/src/main/webapp/group/index.xhtml" class="user-mention">JN-Group</a>
 			</li>
 		</ul>
 	</li>

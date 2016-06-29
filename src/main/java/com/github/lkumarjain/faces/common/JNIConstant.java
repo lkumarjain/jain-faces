@@ -12,7 +12,7 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.common;
+package com.github.lkumarjain.faces.common;
 
 public interface JNIConstant {
 	String COMPONENT_FAMILY = "com.jain.faces.component";

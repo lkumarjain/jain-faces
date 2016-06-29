@@ -12,7 +12,7 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.group;
+package com.github.lkumarjain.faces.group;
 
 import java.io.IOException;
 import java.util.List;

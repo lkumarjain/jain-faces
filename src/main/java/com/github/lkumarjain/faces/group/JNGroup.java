@@ -12,26 +12,30 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.grid;
+package com.github.lkumarjain.faces.group;
 
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
 import javax.faces.component.UIComponentBase;
 
-import com.jain.faces.common.JNIConstant;
+import com.github.lkumarjain.faces.common.JNIConstant;
 
 @ResourceDependencies({ 
-	@ResourceDependency(library="primefaces", name="jquery/jquery.js"),
-	@ResourceDependency(library="primefaces", name="core.js"),
-	@ResourceDependency(library="primefaces", name="components.js"),
-	@ResourceDependency(library = "jainfaces", name = "jn-grid.css") 
+	@ResourceDependency(library = "jainfaces", name = "jn-group.css") 
 })
-public class JNGrid extends UIComponentBase {
-	public static final String COMPONENT_TYPE = "com.jain.faces.component.JNGrid";
-	public static final String DEFAULT_RENDERER = "com.jain.faces.component.JNGridRenderer";
-	private static final String DEFAULT_STYLE_CLASS = "jn-grid";
+public class JNGroup extends UIComponentBase {
+	public static final String COMPONENT_TYPE = "com.jain.faces.component.JNGroup";
+	public static final String DEFAULT_RENDERER = "com.jain.faces.component.JNGroupRenderer";
 
-	public JNGrid() {
+	public static final String DEFAULT_STYLE_CLASS = "jn-group ui-widget-content ";
+	public static final String DEFAULT_TOP_STYLE_CLASS = "jn-group-top";
+	public static final String DEFAULT_CONTENT_WRAPPER_STYLE_CLASS = "jn-group-content-wrapper ui-state-default";
+	public static final String DEFAULT_CONTENT_STYLE_CLASS = "jn-group-content";
+	public static final String DEFAULT_LEFT_STYLE_CLASS = "jn-group-left";
+	public static final String DEFAULT_RIGHT_STYLE_CLASS = "jn-group-right";
+	public static final String DEFAULT_BOTTOM_STYLE_CLASS = "jn-group-bottom";
+
+	public JNGroup() {
 		setRendererType(DEFAULT_RENDERER);
 	}
 
@@ -41,9 +45,7 @@ public class JNGrid extends UIComponentBase {
 
 	protected enum PropertyKeys {
 		style, 
-		styleClass, 
-		columns,
-		template;
+		styleClass;
 
 		String toString;
 
@@ -73,22 +75,6 @@ public class JNGrid extends UIComponentBase {
 
 	public void setStyleClass(String _styleClass) {
 		getStateHelper().put(PropertyKeys.styleClass, _styleClass);
-	}
-
-	public int getColumns() {
-		return (java.lang.Integer) getStateHelper().eval(PropertyKeys.columns, 1);
-	}
-
-	public void setColumns(int _columns) {
-		getStateHelper().put(PropertyKeys.columns, _columns);
-	}
-
-	public String getTemplate() {
-		return (java.lang.String) getStateHelper().eval(PropertyKeys.template, null);
-	}
-
-	public void setTemplate(String _template) {
-		getStateHelper().put(PropertyKeys.template, _template);
 	}
 
 	public Object calculateStyleClass() {

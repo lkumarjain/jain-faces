@@ -12,7 +12,7 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.output;
+package com.github.lkumarjain.faces.output;
 
 import java.io.IOException;
 

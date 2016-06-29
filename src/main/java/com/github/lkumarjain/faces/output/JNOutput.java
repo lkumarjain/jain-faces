@@ -12,13 +12,13 @@
  * limitations under the License.
  *
  */
-package com.jain.faces.output;
+package com.github.lkumarjain.faces.output;
 
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
 import javax.faces.component.UIOutput;
 
-import com.jain.faces.common.JNIConstant;
+import com.github.lkumarjain.faces.common.JNIConstant;
 
 @ResourceDependencies({ 
 	@ResourceDependency(library = "jainfaces", name = "jn-output.css") 
