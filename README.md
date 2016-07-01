@@ -51,5 +51,15 @@
 	</li>
 </ul>
 
+### Maven Dependency 
+This library is direcly available in the Maven Central, No need to  add any other Repository
+<pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;com.github.lkumarjain&lt;/groupId&gt;
+    &lt;artifactId&gt;jainfaces&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1&lt;/version&gt;
+&lt;/dependency&gt;
+</pre>
+
 ###Authors and Contributors
 Any suggestions and contributions are welcomed at [Git](https://github.com/lkumarjain)
