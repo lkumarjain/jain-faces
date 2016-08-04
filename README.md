@@ -39,20 +39,20 @@
 		</ul>
 	</li>
 	<li>
-		<span aria-hidden="true" class="octicon octicon-link">Common Convertor</span>
+		<span aria-hidden="true" class="octicon octicon-link">Common Converter</span>
 		<ul>
 			<li>
 				This can be used in any <code>JSF</code> application or object to convert them back and forth
 			</li>
 			<li>
-				This needs a common interface <code>JNIIdentificable</code> to be impmeneted by any object 
+				This needs a common interface <code>JNIIdentifiable</code> to be impmeneted by any object 
 			</li>
 		</ul>
 	</li>
 </ul>
 
 ### Maven Dependency 
-This library is direcly available in the Maven Central, No need to  add any other Repository
+This library is directly available in the Maven Central, No need to add any other Repository
 <pre>
 &lt;dependency&gt;
     &lt;groupId&gt;com.github.lkumarjain&lt;/groupId&gt;
